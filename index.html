@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kox Qour</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Georgia", serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #000000, #1a1a1a);
+      color: #f1c40f;
+    }
+
+    .profile-pic {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: url("kox.jpg") no-repeat center/cover;
+      border: 5px solid #e74c3c;
+      box-shadow: 0 4px 25px rgba(255,0,0,0.5);
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-size: 2rem;
+      color: #f1c40f;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: 2px solid #f1c40f;
+      border-radius: 10px;
+      background: black;
+      color: #f1c40f;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #e74c3c;
+      color: white;
+      border-color: #e74c3c;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-pic"></div>
+  <h1>Kox Qour</h1>
+  <button onclick="location.href='message.html'">View</button>
+</body>
+</html>

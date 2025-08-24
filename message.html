@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mafia Message</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Georgia", serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #000000, #1a1a1a);
+      text-align: center;
+      color: #f1c40f;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #e74c3c;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    .btn-container {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+      position: relative;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      border: 2px solid #f1c40f;
+      border-radius: 10px;
+      background: black;
+      color: #f1c40f;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+      position: relative;
+    }
+
+    button:hover {
+      background: #e74c3c;
+      color: white;
+      border-color: #e74c3c;
+      transform: scale(1.1);
+    }
+
+    #noBtn {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h2>Pwede ba kitang ligawan?</h2>
+  <div class="btn-container">
+    <button id="yesBtn" onclick="location.href='love.html'">YES</button>
+    <button id="noBtn">NO</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    function moveButton() {
+      const x = Math.floor(Math.random() * 300) - 150; 
+      const y = Math.floor(Math.random() * 300) - 150;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    // For computer
+    noBtn.addEventListener("mouseover", moveButton);
+
+    // For phone/touch
+    noBtn.addEventListener("touchstart", moveButton);
+    noBtn.addEventListener("click", moveButton);
+  </script>
+</body>
+</html>
